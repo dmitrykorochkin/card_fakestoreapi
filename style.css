@@ -1,12 +1,17 @@
 .products {
   width: 1200px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .product {
   width: 30%;
   text-align: center;
+  padding: 10px;
+  background-color: #eeeeee;
+  margin-bottom: 30px;
 }
 
 .product__img {

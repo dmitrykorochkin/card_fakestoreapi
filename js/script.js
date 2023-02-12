@@ -5,12 +5,12 @@ const dataAcquisition = async() => {
     const jsonData = await response.json();
     console.log(jsonData);
 
-    jsonData.forEach(() => {
-      products.innerHTML = `
+    jsonData.forEach(product => {
+      products.innerHTML += `
         <div class="product">
-          <h2 class="product__title">${jsonData[0].title}</h2>
-          <img src="${jsonData[0].image}" alt="" class="product__img">
-          <p class="product__description">${jsonData[0].description}</p>
+          <h2 class="product__title">${product.title}</h2>
+          <img src="${product.image}" alt="" class="product__img">
+          <p class="product__description">${product.description}</p>
       </div>
       `;
     });
