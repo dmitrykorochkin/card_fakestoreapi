@@ -1,8 +1,19 @@
-const product = document.querySelector("#product");
+const products = document.querySelector(".products");
 
-const dataAcquisition = () => {
-  fetch("https://fakestoreapi.com/products/1")
-    .then(res => res.json())
-    .then(json => console.log(json));
+const dataAcquisition = async() => {
+    const response = await fetch("https://fakestoreapi.com/products");
+    const jsonData = await response.json();
+    console.log(jsonData);
+
+    jsonData.forEach(() => {
+      products.innerHTML = `
+        <div class="product">
+          <h2 class="product__title">${jsonData[0].title}</h2>
+          <img src="${jsonData[0].image}" alt="" class="product__img">
+          <p class="product__description">${jsonData[0].description}</p>
+      </div>
+      `;
+    });
+
 };
 dataAcquisition();

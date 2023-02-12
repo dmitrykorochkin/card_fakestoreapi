@@ -1,0 +1,14 @@
+.products {
+  width: 1200px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.product {
+  width: 30%;
+  text-align: center;
+}
+
+.product__img {
+  width: 100px;
+}
