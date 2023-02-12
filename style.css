@@ -10,7 +10,8 @@
   width: 30%;
   text-align: center;
   padding: 10px;
-  background-color: #eeeeee;
+  background-color: #ffffff;
+  box-shadow: 1px 6px 22px rgb(206 206 206);
   margin-bottom: 30px;
 }
 
